@@ -12,35 +12,35 @@ if answer_1 == "a":
     correct_answers += 1
     print("Correct!")
 else:
-    print("Incorrect! The correct answer is a) 9.")
+    print("Incorrect! The correct answer is 'a'")
           
 answer_2 = input("2. Which of the following disorders is the fear of being alone?\n a) Arachnophobia\n b) Acrophobia\n c) Agoraphobia \n d) Aerophobia\nAnswer: ")
 if answer_2 == "c":
     correct_answers += 1
     print("Correct!")
 else:
-    print("Incorrect! The correct answer is c) Agoraphobia")
+    print("Incorrect! The correct answer is 'c'")
     
 answer_3 = input("3. What is the speed of sound?\n a) 120 km/h\n b) 1,200 km/h\n c) 400 km/h\n d) 700 km/h\nAnswer: ")
 if answer_3 == "b":
     correct_answers += 1
     print("Correct!")
 else:
-    print("Incorrect! The correct answer is b) 1,200 km/h")
+    print("Incorrect! The correct answer is 'b'")
           
 answer_4 = input("4. What do we call a newly hatched butterfly?\n a) A moth\n b) A butter\n c) A caterpillar\n d) A chrysalis\nAnswer: ")
 if answer_4 == "c":
     correct_answers += 1
     print("Correct!")
 else:
-    print("Incorrect! The correct answer is c) A caterpillar")
+    print("Incorrect! The correct answer is 'c'")
     
 answer_5 = input("5. The phrase: ”I think, therefore I am” was coined by which philosopher?\n a) Socrates\n b) Plato\n c) Aristotle\n d) Descartes\nAnswer: ")
 if answer_5 == "d":
     correct_answers += 1
     print("Correct!")
 else:
-    print("Incorrect! The correct answer is d) Descartes")
+    print("Incorrect! The correct answer is 'd'")
  
 congratulations = "The number of correct answers is {}. You won {}."         
 if correct_answers == 5:
