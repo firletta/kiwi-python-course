@@ -8,25 +8,34 @@ the user with the name of the account.
 """
 
 name = input("Enter a name for your account: ")
-balance = int(input("Enter account's balance: "))
-confirmation = "Current balance of account '{}' is {}."
+
+# you should use `float` for storing amount of money
+balance = float(input("Enter account's balance: "))
 
 if balance >= 0:
     withdraw_or_deposit = input("Would you like to a) withdraw or b) deposit money? ")
-    if withdraw_or_deposit == "a" or "b":
+
+    # this doesn't do what you probably expected
+    # this actaully does following (withdraw_or_deposit == "a") OR ("b") which is always evaluated as True
+    # a more advanced way would be to use the `in` operator, then the condition would look like this:
+    # if withdraw_or_deposit in {"a", "b"}:
+    # with the condition like this, when I run the app and insert `c` it asks me about depositing money
+    if withdraw_or_deposit in {"a", "b"}:
         if withdraw_or_deposit == "a":
-            amount = int(input("Please enter amount you'd like to withdraw: "))
+            amount = float(input("Please enter amount you'd like to withdraw: "))
             if amount > balance:
                 print("Insufficient funds on the account.")
             else:
                 new_balance = balance - amount
                 print("Operation completed.")
-                print(confirmation.format(name,new_balance))
+                # I guess you used `format` to reused the confirmation message
+                # these days, f-strings are preferred as they are easier to read
+                print(f"Current balance of account {name} is '{new_balance}'.")
         else:
-            amount = int(input("Please enter amount you'd like to deposit: "))
+            amount = float(input("Please enter amount you'd like to deposit: "))
             new_balance = balance + amount
             print("Operation completed.")
-            print(confirmation.format(name,new_balance))
+            print(f"Current balance of account {name} is '{new_balance}'.")
     else:
         print("Incorrect input. You should enter 'a' or 'b'.")
 else:
