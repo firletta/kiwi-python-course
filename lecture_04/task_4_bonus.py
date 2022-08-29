@@ -5,3 +5,5 @@
 # or https://www.youtube.com/watch?v=Z3dCjzhjAWA
 # (don't look at the solution at the end of videos, it wouldn't be fun otherwise)
 # TODO
+
+the_list = [41, 13, 5, -5, 9, 0, 0, 41, -1, -23, 0]
