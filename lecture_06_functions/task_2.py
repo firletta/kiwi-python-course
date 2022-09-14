@@ -39,8 +39,19 @@ def get_baby_eye_color(father_eyes: str, mother_eyes: str) -> str:
 
     :return: str (one of "brown", "green", "blue")
     """
-    # TODO your implementation here
-    return ""
+    if father_eyes == mother_eyes == "brown":
+        baby_eyes = "brown"
+    elif father_eyes == mother_eyes ==  "blue":
+            baby_eyes = "blue"
+    elif father_eyes == mother_eyes ==  "green":
+        baby_eyes = "green"
+    elif father_eyes in ["green", "brown"] and mother_eyes in ["green", "brown"]:
+        baby_eyes = "brown"
+    elif father_eyes in ["blue", "brown"] and mother_eyes in ["blue", "brown"]:
+        brownbaby_eyes = "blue or brown"
+    elif father_eyes in ["green", "blue"] and mother_eyes in ["green", "blue"]:
+        baby_eyes = "blue or brown"
+    return baby_eyes
 
 
 def measure_baby_eye_color_ratio(n: int, father_eyes: str, mother_eyes: str) -> (float, float, float):
@@ -110,20 +121,20 @@ print(" - green:", ratio[1])
 print(" - blue:", ratio[2])
 
 # -- BONUS --
-grandfather_father_eyes = input("Grandfather from father eye color [brown, green, blue]: ")
-grandmother_father_eyes = input("Grandmother from father eye color [brown, green, blue]: ")
-grandfather_mother_eyes = input("Grandfather from mother eye color [brown, green, blue]: ")
-grandmother_mother_eyes = input("Grandmother from mother eye color [brown, green, blue]: ")
+# grandfather_father_eyes = input("Grandfather from father eye color [brown, green, blue]: ")
+# grandmother_father_eyes = input("Grandmother from father eye color [brown, green, blue]: ")
+# grandfather_mother_eyes = input("Grandfather from mother eye color [brown, green, blue]: ")
+# grandmother_mother_eyes = input("Grandmother from mother eye color [brown, green, blue]: ")
 
-print("Baby eyes color -", get_grand_baby_eye_color(
-    grandfather_father_eyes,
-    grandmother_father_eyes,
-    grandfather_mother_eyes,
-    grandmother_mother_eyes
-))
+# print("Baby eyes color -", get_grand_baby_eye_color(
+#     grandfather_father_eyes,
+#     grandmother_father_eyes,
+#     grandfather_mother_eyes,
+#     grandmother_mother_eyes
+# ))
 
-ratio = measure_grand_baby_eye_color_ratio(1000, grandfather_father_eyes, grandmother_father_eyes, grandfather_mother_eyes, grandmother_mother_eyes)
-print("Measured ratio")
-print(" - brown:", ratio[0])
-print(" - green:", ratio[1])
-print(" - blue:", ratio[2])
+# ratio = measure_grand_baby_eye_color_ratio(1000, grandfather_father_eyes, grandmother_father_eyes, grandfather_mother_eyes, grandmother_mother_eyes)
+# print("Measured ratio")
+# print(" - brown:", ratio[0])
+# print(" - green:", ratio[1])
+# print(" - blue:", ratio[2])

@@ -12,12 +12,19 @@ from __future__ import annotations # no need for this if REPL would be in python
 
 
 def merge_routes(route_1: str, route_2: str) -> str | None:
-    # TODO implementation here
-    pass
+    route_1_list = route_1.split("->")
+    route_2_list = route_2.split("->")
+    if route_1_list[-1] == route_2_list[0]:
+        del route_2_list[0]
+        route = "->".join(route_1_list + route_2_list)
+    else:
+        route = None
+    return route
+
 
 route_1 = "JFK->LHR->PRG"
-print(route_1.split("->")) # you can use split function to get a list of individual cities
-print("->".join(["JFK", "LHR", "PRG"])) # you can use join function to construct route from list of cities
+# print(route_1.split("->")) # you can use split function to get a list of individual cities
+# print("->".join(["JFK", "LHR", "PRG"])) # you can use join function to construct route from list of cities
 route_2 = "PRG->VIE"
 route_3 = "FCO->VIE"
 
