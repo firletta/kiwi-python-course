@@ -53,6 +53,9 @@ def get_baby_eye_color(father_eyes: str, mother_eyes: str) -> str:
         baby_eyes = "blue or brown"
     return baby_eyes
 
+# TODO random.choices(num_list)
+# https://www.geeksforgeeks.org/choose-elements-from-list-with-different-probability-in-python/
+
 
 def measure_baby_eye_color_ratio(n: int, father_eyes: str, mother_eyes: str) -> (float, float, float):
     """
