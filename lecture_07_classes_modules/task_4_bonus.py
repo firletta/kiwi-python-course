@@ -8,3 +8,5 @@
 # IsoscelesTriangle(two sides are equal) using the inheritance principle.
 # For all three classes use their method to
 # compute `area` of the shape. Hint: You can implement only 1 method `compute_area` to cover all three cases
+
+#TODO

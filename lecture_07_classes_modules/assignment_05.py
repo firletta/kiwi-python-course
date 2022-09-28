@@ -8,3 +8,4 @@
 # - create_random_circus() – creates a list of one random lion (random name and age) and one random elephant (random name and weight).
 # - filter_animals(animals) – filters animals that are too heavy (in case of the elephants) and too old (in case of the lions).
 # Import this module to main.py, where you create and print random circus, then filter animals and print animals that are left.
+
