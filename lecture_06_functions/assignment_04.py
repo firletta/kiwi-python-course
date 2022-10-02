@@ -15,6 +15,6 @@ def check_city(country, city):
     if city in my_list:
         return True
     else:
-        return(False)
+        return False
 
 print(check_city("Australia", "Brno"))
