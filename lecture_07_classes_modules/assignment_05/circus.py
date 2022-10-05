@@ -34,11 +34,17 @@ class Lion:
 
 def create_random_circus():
     names = ["John","Andy","Joe","William","Emma","Olivia","Noah","Isabella","Mia","Sophia","Amelia","Jacob"]
-    random_elephant_name = random.choice(names)
-    random_weight = random.randint(1,10)
-    random_lion_name = random.choice(names)
-    random_age = random.randint(1,16)
-    return [random_elephant_name,random_weight], [random_lion_name,random_age]
+    animals = {
+        "elephant" : {
+            "name" : random.choice(names),
+            "weight" : random.randint(1,10)
+        },
+        "lion" : {
+            "name" : random.choice(names),
+            "age" : random.randint(1,16)
+        }
+    }
+    return animals
 
 elephant1 = Elephant("Snoopy",10)
 print(elephant1.is_too_heavy())
@@ -46,14 +52,18 @@ print(elephant1.is_too_heavy())
 lion1 = Lion("Simba",13)
 print(lion1.is_too_old())
 
-random_elephant , random_lion = create_random_circus()
-print(random_elephant , random_lion)
+random_animals = create_random_circus()
 
-elephant2 = Elephant(random_elephant[0],random_elephant[1])
-lion2 = Lion(random_lion[0],random_lion[1])
+if "elephant" in random_animals.keys():
+    if "weight" in random_animals["elephant"].keys():
+        print(random_animals["elephant"]["weight"])
+else:
+    print("meh")
 
-print(elephant2.is_too_heavy())
-print(lion2.is_too_old())
+
+
+
+
 
 
 
