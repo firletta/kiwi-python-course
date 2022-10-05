@@ -9,7 +9,5 @@
 
 import circus
 
-elephant = circus.Elephant("Snoopy",5)
-
-
-print(elephant.is_too_heavy)
+animals = circus.create_random_circus()
+filtered_animals = circus.filter_animals(animals)

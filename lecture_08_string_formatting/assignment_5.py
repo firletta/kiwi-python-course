@@ -1,4 +1,7 @@
-#TODO  Print progress bar, each second add new symbol
+# [ ] Finish task
+# [ ] Save files to drive
+
+#  Print progress bar, each second add new symbol
 # Example of progress bar can be:
 # [>              ] 0.00 %
 # [=>             ] 6.67 %

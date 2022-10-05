@@ -1,4 +1,7 @@
-# TODO Create a classes called Student and Graduate
+# [ ] Finish task
+# [ ] Save files to drive
+
+#  Create a classes called Student and Graduate
 # Student contains name, surname and a field of study
 # Graduate contains name, surname, a field of study and a obtained title.
 # Create a method `graduate` in class `Student` which creates a new instance of the Graduate class
