@@ -1,4 +1,4 @@
-# In presentation we have mentioned something called inheritance.
+#TODO In presentation we have mentioned something called inheritance.
 # Check these two videos (or just google any  article yoou want) and try to learn the basics of Inheritance in Python.
 # https://www.youtube.com/watch?v=RSl87lqOXDE
 # https://www.youtube.com/watch?v=H2SQrZK2nvM
@@ -8,5 +8,3 @@
 # IsoscelesTriangle(two sides are equal) using the inheritance principle.
 # For all three classes use their method to
 # compute `area` of the shape. Hint: You can implement only 1 method `compute_area` to cover all three cases
-
-#TODO

@@ -1,4 +1,4 @@
-# Create a classes called Student and Graduate
+# TODO Create a classes called Student and Graduate
 # Student contains name, surname and a field of study
 # Graduate contains name, surname, a field of study and a obtained title.
 # Create a method `graduate` in class `Student` which creates a new instance of the Graduate class
@@ -8,5 +8,3 @@
 # So lets say we have `student = Student("John", "Smith", "biology")`
 # `graduated_john = student.graduate("Mgr") should result in `graduated_john` containing Graduate
 # instance with correct title, name etc.
-
-#TODO
