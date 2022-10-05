@@ -1,4 +1,5 @@
-# TODO as homework
+# [x] Finish task
+# [ ] Save files to drive
 
 # [BONUS] Create the module circus.py with two classes:
 # - Elephant – attributes name, weight and the method is_too_heavy that will return True if the
@@ -46,30 +47,15 @@ def create_random_circus():
     }
     return animals
 
-elephant1 = Elephant("Snoopy",10)
-print(elephant1.is_too_heavy())
-
-lion1 = Lion("Simba",13)
-print(lion1.is_too_old())
-
-random_animals = create_random_circus()
-
-if "elephant" in random_animals.keys():
-    if "weight" in random_animals["elephant"].keys():
-        print(random_animals["elephant"]["weight"])
-else:
-    print("meh")
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+def filter_animals(animals):
+    if "elephant" in animals.keys():
+        if "weight" in animals["elephant"].keys():
+            circus_elephant = Elephant(animals["elephant"]["name"],animals["elephant"]["weight"])
+        if circus_elephant.is_too_heavy() == True:
+            animals.pop("elephant", None)
+    if "lion" in animals.keys():
+        if "age" in animals["lion"].keys():
+            circus_lion = Lion(animals["lion"]["name"],animals["lion"]["age"])
+        if circus_lion.is_too_old() == True:
+            animals.pop("lion", None)
+    return animals
