@@ -10,4 +10,7 @@
 import circus
 
 animals = circus.create_random_circus()
+print("Random circus:", animals)
 filtered_animals = circus.filter_animals(animals)
+print("Filtered circus:",filtered_animals)
+
