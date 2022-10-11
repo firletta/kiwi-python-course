@@ -1,4 +1,4 @@
-# [ ] Finish task
+# [x] Finish task
 # [ ] Save files to drive
 
 # Print the given table, with the rows and columns, so they are nicely aligned
@@ -21,3 +21,13 @@ table = [
     ["USA", "Washington, D.C.", 327200000],
     ["Madagascar", "Antananarivo", 25570000],
 ]
+
+def separator():
+    return print(f"#{'-'*12}#{'-'*18}#{'-'*14}#")
+
+separator()
+print(f"|{table[0][0]:^12}|{table[0][1]:^18}|{table[0][2]:^14}|")
+separator()
+for rows in table[1:5]:
+    print(f"|{rows[0]:<12}|{rows[1]:<18}|{rows[2]:>14,}|")
+separator()

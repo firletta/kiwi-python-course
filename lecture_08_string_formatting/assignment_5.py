@@ -1,4 +1,4 @@
-# [ ] Finish task
+# [x] Finish task
 # [ ] Save files to drive
 
 #  Print progress bar, each second add new symbol
@@ -23,8 +23,9 @@
 from time import sleep
 bar_length = 15
 
-for i in range(bar_length):
-    # -- Add your code here --
+for i in range(bar_length+1):
+    bar = "="*i + ">"
+    percentage = i/bar_length
+    print(f"[{bar:15.15}] {percentage:.2%}")
 
     sleep(1)
-
