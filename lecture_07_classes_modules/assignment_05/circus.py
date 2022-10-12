@@ -1,6 +1,3 @@
-# [x] Finish task
-# [ ] Save files to drive
-
 # [BONUS] Create the module circus.py with two classes:
 # - Elephant – attributes name, weight and the method is_too_heavy that will return True if the
 # elephant is heavier than 8 tons.

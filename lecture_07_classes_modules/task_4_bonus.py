@@ -1,6 +1,3 @@
-# [x] Finish task
-# [ ] Save files to drive
-
 # In presentation we have mentioned something called inheritance.
 # Check these two videos (or just google any  article yoou want) and try to learn the basics of Inheritance in Python.
 # https://www.youtube.com/watch?v=RSl87lqOXDE

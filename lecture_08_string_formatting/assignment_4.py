@@ -1,6 +1,3 @@
-# [x] Finish task
-# [ ] Save files to drive
-
 # Print the given table, with the rows and columns, so they are nicely aligned
 # Example of the output could look like:
 # #-----------#----------------#------------#

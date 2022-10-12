@@ -1,6 +1,3 @@
-# [x] Finish task
-# [ ] Save files to drive
-
 #  Create a classes called Student and Graduate
 # Student contains name, surname and a field of study
 # Graduate contains name, surname, a field of study and a obtained title.
