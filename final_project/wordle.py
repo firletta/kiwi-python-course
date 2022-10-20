@@ -4,9 +4,13 @@ import random
 words_file = open("words.txt","r") # source: https://www-cs-faculty.stanford.edu/~knuth/sgb-words.txt
 words_data = words_file.read()
 words_list = words_data.split()
-# word_to_guess = random.choice(words_list)
-word_to_guess = "pills"
-number_of_rounds = 2
+word_to_guess = random.choice(words_list)
+number_of_rounds = 6
+
+def guess_the_word():
+    user_input = input("Your guess: ")
+    user_guess = user_input.lower()
+    return user_guess
 
 def error_message():
     print(f"Invalid input. It has to be a valid {len(word_to_guess)}-letter word. Try again.")
@@ -34,27 +38,30 @@ print(f"\n{Styles.white_tile('v')} {Styles.white_tile('a')} {Styles.white_tile('
 
 # game below
 for round in range(1,number_of_rounds+1):
-    user_input = input("Your guess: ")
-    user_guess = user_input.lower()
+    user_guess = guess_the_word()
 
     while len(user_guess) != len(word_to_guess):
         error_message()
-        user_input = input("Your guess: ")
-        user_guess = user_input.lower()
+        user_guess = guess_the_word()
 
     while user_guess not in words_list:
         error_message()
-        user_input = input("Your guess: ")
-        user_guess = user_input.lower()
+        user_guess = guess_the_word()
 
+    # creating list of correct letters
+    green_tiles = []
+
+    for i in range(len(word_to_guess)):
+            if user_guess[i] == word_to_guess[i]:
+                green_tiles.append(user_guess[i])
+
+    # coloring users guess
     colored_user_guess = []
-    green_tiles_count = 0
 
     for i in range(len(word_to_guess)):
         if user_guess[i] == word_to_guess[i]:
             colored_user_guess.append(Styles.green_tile(user_guess[i]))
-            green_tiles_count += 1
-        elif user_guess[i] in word_to_guess:
+        elif user_guess[i] in word_to_guess and green_tiles.count(user_guess[i]) + colored_user_guess.count(Styles.yellow_tile(user_guess[i])) < word_to_guess.count(user_guess[i]):
             colored_user_guess.append(Styles.yellow_tile(user_guess[i]))
         else:
             colored_user_guess.append(Styles.grey_tile(user_guess[i]))
@@ -64,6 +71,6 @@ for round in range(1,number_of_rounds+1):
     if round == number_of_rounds:
         print(f"Game over. The Wordle is {word_to_guess.upper()}.")
 
-    if green_tiles_count == len(word_to_guess):
+    if len(green_tiles) == len(word_to_guess):
         print(f"Congrats! You guessed the Wordle.")
         break
