@@ -15,6 +15,9 @@ def guess_the_word():
 def error_message():
     print(f"Invalid input. It has to be a valid {len(word_to_guess)}-letter word. Try again.")
 
+def game_over_message():
+    print(f"Game over. The Wordle is {word_to_guess.upper()}.")
+
 class Styles:
     def green_tile(text):
         return f"\x1B[38;5;232m\x1B[48;5;42m[{text.upper()}]\033[0m"
@@ -31,7 +34,7 @@ class Styles:
 
 # printing game rules
 print(f"\nWelcome to\n{Styles.green_tile('W')} {Styles.green_tile('O')} {Styles.green_tile('R')} {Styles.green_tile('D')} {Styles.green_tile('L')} {Styles.green_tile('E')}\n\n")
-print(f"How To Play:\nGuess the word in {number_of_rounds} tries.\n- Each guess must be a  {len(word_to_guess)}-letter word.\n- The color of the tiles will change to show how close your guess was to the word.\n\nExamples:")
+print(f"How To Play:\nGuess the word in {number_of_rounds} tries.\n- Each guess must be a  {len(word_to_guess)}-letter word.\n- The color of the tiles will change to show how close your guess was to the word.\n- You can quit game at any time by typing 'quit game'.\n\nExamples:")
 print(f"\n{Styles.green_tile('w')} {Styles.white_tile('e')} {Styles.white_tile('a')} {Styles.white_tile('r')} {Styles.white_tile('y')}\n'W' is in the word and in the correct spot.")
 print(f"\n{Styles.white_tile('p')} {Styles.yellow_tile('i')} {Styles.white_tile('l')} {Styles.white_tile('l')} {Styles.white_tile('s')}\n'I' is in the word but in the wrong spot.")
 print(f"\n{Styles.white_tile('v')} {Styles.white_tile('a')} {Styles.white_tile('g')} {Styles.grey_tile('u')} {Styles.white_tile('e')}\n'U' is not in the word in any spot.\n")
@@ -39,6 +42,10 @@ print(f"\n{Styles.white_tile('v')} {Styles.white_tile('a')} {Styles.white_tile('
 # game below
 for round in range(1,number_of_rounds+1):
     user_guess = guess_the_word()
+
+    if user_guess == "quit game":
+        game_over_message()
+        break
 
     while len(user_guess) != len(word_to_guess):
         error_message()
@@ -69,7 +76,7 @@ for round in range(1,number_of_rounds+1):
     print(f"\n{round}. {' '.join(colored_user_guess)}\n")
 
     if round == number_of_rounds:
-        print(f"Game over. The Wordle is {word_to_guess.upper()}.")
+        game_over_message()
 
     if len(green_tiles) == len(word_to_guess):
         print(f"Congrats! You guessed the Wordle.")
