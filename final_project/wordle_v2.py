@@ -1,5 +1,6 @@
 import random
 
+# TODO add error for when there is no words.txt file
 words_file = open("words.txt","r") # source: https://www-cs-faculty.stanford.edu/~knuth/sgb-words.txt
 words_data = words_file.read()
 words_list = words_data.split()
